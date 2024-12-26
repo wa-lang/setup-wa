@@ -8,11 +8,6 @@ name: Setup Wa(凹语言)
 author: 凹语言开发组
 description: 'A github action to setup Wa(凹语言) environment'
 
-
-branding:
-  icon: 'https://github.com/wa-lang/setup-wa/raw/master/logo.svg'
-  color: '#20b2aa'
-
 inputs:
   version:
     description: "Wa version"
