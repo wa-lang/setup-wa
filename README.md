@@ -1,2 +1,1 @@
-# setup-wa
-Setup Wa Language Action
+# Setup Wa Language Action

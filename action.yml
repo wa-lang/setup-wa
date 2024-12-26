@@ -1,0 +1,29 @@
+# Setup Wa Action
+#   @author: 凹语言开发组
+#   @created: 2024/12/26 16:30:00
+# REF:
+#   - https://wa-lang.org/
+
+name: Setup Wa(凹语言)
+author: 凹语言开发组
+description: 'A github action to setup Wa(凹语言) environment'
+
+branding:
+  icon: 'https://raw.githubusercontent.com/wa-lang/setup-wa/refs/heads/master/logo.svg'
+  color: 'LightSeaGreen'
+
+inputs:
+  version:
+    description: "Wa version"
+    required: false
+    default: "master"
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: 1.17
+    - name: Install Wa
+      run: go install wa-lang.org/wa@${{ inputs.version }}
+      shell: sh
