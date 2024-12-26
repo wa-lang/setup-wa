@@ -1,0 +1,46 @@
+# 版权 @2024 凹语言 作者。保留所有权利。
+
+name: Run Wa App
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+      - "releases/*"
+jobs:
+  build-and-test-ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Wa(凹语言)
+        uses: wa-lang/setup-wa
+
+      - run: wa -v
+      - run: wa run heart.wa
+
+  build-and-test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Wa(凹语言)
+        uses: wa-lang/setup-wa
+
+      - run: wa -v
+      - run: wa run heart.wa
+
+  build-and-test-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Wa(凹语言)
+        uses: wa-lang/setup-wa
+
+      - run: wa -v
+      - run: wa run heart.wa
