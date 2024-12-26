@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Set up Wa(凹语言)
-        uses: wa-lang/setup-wa
+        uses: wa-lang/setup-wa@master
 
       - run: wa -v
       - run: wa run heart.wa
